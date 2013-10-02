@@ -45,6 +45,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1310FD8917FC9AE600B4AD77 /* DetailViewTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewTableCell.h; path = ../DetailViewTableCell.h; sourceTree = "<group>"; };
 		B79F872017E2DD3E001EFCF4 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
 		B79F872117E2DD3E001EFCF4 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
 		B79F872317E2DD77001EFCF4 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -126,7 +127,6 @@
 		B7DD425817F7F985006D0C6E /* NSCoderExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCoderExtensions.h; sourceTree = "<group>"; };
 		B7DD425917F7F985006D0C6E /* NSDecimalNumberExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDecimalNumberExtensions.h; sourceTree = "<group>"; };
 		B7DD425A17F7F985006D0C6E /* NSNumberExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumberExtensions.h; sourceTree = "<group>"; };
-		B7E07FF617E22CC300E28577 /* DetailViewTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewTableCell.h; sourceTree = "<group>"; };
 		B7E07FF717E22CC300E28577 /* DetailViewTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewTableCell.m; sourceTree = "<group>"; };
 		B7E07FF917E22CDC00E28577 /* DetailViewTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewTableCell.xib; sourceTree = "<group>"; };
 		B7E1057E17E1E822003C8D4E /* ManageSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManageSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -331,7 +331,7 @@
 				B7E105C217E2104E003C8D4E /* DetailViewController.h */,
 				B7E105C317E2104E003C8D4E /* DetailViewController.m */,
 				B7E105C417E2104E003C8D4E /* DetailViewController.xib */,
-				B7E07FF617E22CC300E28577 /* DetailViewTableCell.h */,
+				1310FD8917FC9AE600B4AD77 /* DetailViewTableCell.h */,
 				B7E07FF717E22CC300E28577 /* DetailViewTableCell.m */,
 				B7E07FF917E22CDC00E28577 /* DetailViewTableCell.xib */,
 			);
