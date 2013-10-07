@@ -14,5 +14,10 @@
 
 @property (strong, nonatomic) UITabBarController *tabBarController;
 @property (strong, nonatomic) UINavigationController *navigationController;
+@property (strong, nonatomic) UINavigationController *navigationController2;
+@property (strong, nonatomic) UINavigationController *navigationController3;
+@property (strong, nonatomic) UINavigationController *navigationController4;
+@property (strong, nonatomic) UINavigationController *navigationController5;
+@property (strong, nonatomic) UINavigationController *navigationController6;
 
 @end

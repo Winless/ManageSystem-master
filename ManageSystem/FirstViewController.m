@@ -171,7 +171,7 @@
     }
     else
     {
-    detailViewController.branchId = [NSString stringWithFormat:@"%@", [branchId objectAtIndex:indexPath.row+1]];
+        detailViewController.branchId = [NSString stringWithFormat:@"%@", [branchId objectAtIndex:indexPath.row+1]];
     }
     [self.navigationController pushViewController:detailViewController animated:YES];
 }

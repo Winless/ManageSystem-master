@@ -18,21 +18,33 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    UIViewController *viewController1, *viewController2;
+    UIViewController *viewController1, *viewController2, *viewController3, *viewController4, *viewController5, *viewController6;
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController_iPhone" bundle:nil];
-        viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController_iPhone" bundle:nil];
+        viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
     } else {
         viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController_iPad" bundle:nil];
         viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController_iPad" bundle:nil];
     }
+    viewController3 = [[AppointmentTableViewController alloc]initWithNibName:@"AppointmentTableViewController" bundle:nil];
+    viewController4 = [[BookingViewController alloc]initWithNibName:@"BookingViewController" bundle:nil];
+    viewController5 = [[ChooseBookingViewController alloc]initWithNibName:@"ChooseBookingViewController" bundle:nil];
+//    viewController6 = [[ConfirmViewController alloc]initWithNibName:@"ConfirmViewController" bundle:nil];
     
+                       
     _navigationController = [[UINavigationController alloc] initWithRootViewController:viewController1];
+    _navigationController2 = [[UINavigationController alloc] initWithRootViewController:viewController2];
+    _navigationController3 = [[UINavigationController alloc] initWithRootViewController:viewController3];
+    _navigationController4 = [[UINavigationController alloc] initWithRootViewController:viewController4];
+    _navigationController5 = [[UINavigationController alloc] initWithRootViewController:viewController5];
+   // _navigationController6 = [[UINavigationController alloc] initWithRootViewController:viewController5];
+    
+
+    
     
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = @[_navigationController, viewController2];
+    self.tabBarController.viewControllers = @[_navigationController, _navigationController2];
     [self.tabBarController setDelegate:self];
-    
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;
@@ -45,6 +57,7 @@
     {
         NSLog(@"work");
         [_navigationController popViewControllerAnimated:NO];
+ //       [_navigationController2 popViewControllerAnimated:NO];
     }
 }
 

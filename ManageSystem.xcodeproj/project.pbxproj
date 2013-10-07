@@ -7,6 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1326AD8117FFE0EB00D4EE50 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1326AD8017FFE0EA00D4EE50 /* 2.png */; };
+		1326AD841800128200D4EE50 /* DrawLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 1326AD831800128200D4EE50 /* DrawLine.m */; };
+		1343BE4417FDAC5E00AB9E43 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1343BE4317FDAC5E00AB9E43 /* SecondViewController.xib */; };
+		1343BE4817FDB32E00AB9E43 /* AppointmentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1343BE4617FDB32E00AB9E43 /* AppointmentTableViewController.m */; };
+		1343BE4917FDB32E00AB9E43 /* AppointmentTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1343BE4717FDB32E00AB9E43 /* AppointmentTableViewController.xib */; };
+		138180691801E9F5004C5429 /* ChooseBookingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 138180671801E9F5004C5429 /* ChooseBookingViewController.m */; };
+		1381806A1801E9F5004C5429 /* ChooseBookingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 138180681801E9F5004C5429 /* ChooseBookingViewController.xib */; };
+		1381806C1801FD99004C5429 /* select.png in Resources */ = {isa = PBXBuildFile; fileRef = 1381806B1801FD99004C5429 /* select.png */; };
+		1381806E1801FDA3004C5429 /* disselect.png in Resources */ = {isa = PBXBuildFile; fileRef = 1381806D1801FDA3004C5429 /* disselect.png */; };
+		138180711801FEDD004C5429 /* ChooseBookingTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 138180701801FEDD004C5429 /* ChooseBookingTableCell.m */; };
+		138180731801FF05004C5429 /* ChooseBookingTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 138180721801FF04004C5429 /* ChooseBookingTableCell.xib */; };
+		1381808418029221004C5429 /* ConfirmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1381808218029220004C5429 /* ConfirmViewController.m */; };
+		1381808518029221004C5429 /* ConfirmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1381808318029221004C5429 /* ConfirmViewController.xib */; };
+		13A7B7DB17FF373000141F88 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 13A7B7DA17FF373000141F88 /* 3.png */; };
+		13A7B7DD17FF3B7500141F88 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 13A7B7DC17FF3B7500141F88 /* 1.png */; };
+		13E2EECA17FDEA1900F01FB8 /* AppointmentViewTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E2EEC917FDEA1800F01FB8 /* AppointmentViewTableCell.m */; };
+		13E2EECC17FDEA3D00F01FB8 /* AppointmentViewTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13E2EECB17FDEA3C00F01FB8 /* AppointmentViewTableCell.xib */; };
+		13E2EED017FE020E00F01FB8 /* ServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E2EECE17FE020D00F01FB8 /* ServiceViewController.m */; };
+		13E2EED117FE020E00F01FB8 /* ServiceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13E2EECF17FE020E00F01FB8 /* ServiceViewController.xib */; };
+		13E826A818009516007C43EC /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E826A718009516007C43EC /* next.png */; };
+		13E826AA180095D7007C43EC /* last.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E826A9180095D7007C43EC /* last.png */; };
+		13EDBAD417FE8A5400640C7D /* jump.png in Resources */ = {isa = PBXBuildFile; fileRef = 13EDBAD317FE8A5400640C7D /* jump.png */; };
+		13EDBAD817FEC9BA00640C7D /* BookingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EDBAD617FEC9B900640C7D /* BookingViewController.m */; };
+		13EDBAD917FEC9BA00640C7D /* BookingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13EDBAD717FEC9B900640C7D /* BookingViewController.xib */; };
 		B79F872217E2DD3E001EFCF4 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = B79F872117E2DD3E001EFCF4 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B79F872417E2DD77001EFCF4 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B79F872317E2DD77001EFCF4 /* libxml2.dylib */; };
 		B7DD420C17F7F974006D0C6E /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7DD420B17F7F974006D0C6E /* libCorePlot-CocoaTouch.a */; };
@@ -29,7 +53,6 @@
 		B7E105A617E1E822003C8D4E /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7E105A517E1E822003C8D4E /* second@2x.png */; };
 		B7E105A917E1E822003C8D4E /* FirstViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E105A717E1E822003C8D4E /* FirstViewController_iPhone.xib */; };
 		B7E105AC17E1E822003C8D4E /* FirstViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E105AA17E1E822003C8D4E /* FirstViewController_iPad.xib */; };
-		B7E105AF17E1E822003C8D4E /* SecondViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E105AD17E1E822003C8D4E /* SecondViewController_iPhone.xib */; };
 		B7E105B217E1E822003C8D4E /* SecondViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E105B017E1E822003C8D4E /* SecondViewController_iPad.xib */; };
 		B7E105BA17E2068F003C8D4E /* IndexTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E105B917E2068F003C8D4E /* IndexTableCell.m */; };
 		B7E105BC17E206B2003C8D4E /* IndexTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E105BB17E206B2003C8D4E /* IndexTableCell.xib */; };
@@ -46,6 +69,38 @@
 
 /* Begin PBXFileReference section */
 		1310FD8917FC9AE600B4AD77 /* DetailViewTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewTableCell.h; path = ../DetailViewTableCell.h; sourceTree = "<group>"; };
+		1326AD8017FFE0EA00D4EE50 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		1326AD821800128200D4EE50 /* DrawLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawLine.h; sourceTree = "<group>"; };
+		1326AD831800128200D4EE50 /* DrawLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawLine.m; sourceTree = "<group>"; };
+		1343BE4317FDAC5E00AB9E43 /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SecondViewController.xib; path = ../SecondViewController.xib; sourceTree = "<group>"; };
+		1343BE4517FDB32D00AB9E43 /* AppointmentTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppointmentTableViewController.h; path = ../AppointmentTableViewController.h; sourceTree = "<group>"; };
+		1343BE4617FDB32E00AB9E43 /* AppointmentTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppointmentTableViewController.m; path = ../AppointmentTableViewController.m; sourceTree = "<group>"; };
+		1343BE4717FDB32E00AB9E43 /* AppointmentTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AppointmentTableViewController.xib; path = ../AppointmentTableViewController.xib; sourceTree = "<group>"; };
+		138180661801E9F5004C5429 /* ChooseBookingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseBookingViewController.h; sourceTree = "<group>"; };
+		138180671801E9F5004C5429 /* ChooseBookingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseBookingViewController.m; sourceTree = "<group>"; };
+		138180681801E9F5004C5429 /* ChooseBookingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseBookingViewController.xib; sourceTree = "<group>"; };
+		1381806B1801FD99004C5429 /* select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select.png; sourceTree = "<group>"; };
+		1381806D1801FDA3004C5429 /* disselect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disselect.png; sourceTree = "<group>"; };
+		1381806F1801FEDC004C5429 /* ChooseBookingTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseBookingTableCell.h; sourceTree = "<group>"; };
+		138180701801FEDD004C5429 /* ChooseBookingTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseBookingTableCell.m; sourceTree = "<group>"; };
+		138180721801FF04004C5429 /* ChooseBookingTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseBookingTableCell.xib; sourceTree = "<group>"; };
+		1381808118029220004C5429 /* ConfirmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmViewController.h; sourceTree = "<group>"; };
+		1381808218029220004C5429 /* ConfirmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmViewController.m; sourceTree = "<group>"; };
+		1381808318029221004C5429 /* ConfirmViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfirmViewController.xib; sourceTree = "<group>"; };
+		13A7B7DA17FF373000141F88 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		13A7B7DC17FF3B7500141F88 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		13E2EEC817FDEA1800F01FB8 /* AppointmentViewTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppointmentViewTableCell.h; sourceTree = "<group>"; };
+		13E2EEC917FDEA1800F01FB8 /* AppointmentViewTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppointmentViewTableCell.m; sourceTree = "<group>"; };
+		13E2EECB17FDEA3C00F01FB8 /* AppointmentViewTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppointmentViewTableCell.xib; sourceTree = "<group>"; };
+		13E2EECD17FE020D00F01FB8 /* ServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceViewController.h; sourceTree = "<group>"; };
+		13E2EECE17FE020D00F01FB8 /* ServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceViewController.m; sourceTree = "<group>"; };
+		13E2EECF17FE020E00F01FB8 /* ServiceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServiceViewController.xib; sourceTree = "<group>"; };
+		13E826A718009516007C43EC /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
+		13E826A9180095D7007C43EC /* last.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = last.png; sourceTree = "<group>"; };
+		13EDBAD317FE8A5400640C7D /* jump.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jump.png; sourceTree = "<group>"; };
+		13EDBAD517FEC9B800640C7D /* BookingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookingViewController.h; sourceTree = "<group>"; };
+		13EDBAD617FEC9B900640C7D /* BookingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookingViewController.m; sourceTree = "<group>"; };
+		13EDBAD717FEC9B900640C7D /* BookingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookingViewController.xib; sourceTree = "<group>"; };
 		B79F872017E2DD3E001EFCF4 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
 		B79F872117E2DD3E001EFCF4 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
 		B79F872317E2DD77001EFCF4 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -152,7 +207,6 @@
 		B7E105A517E1E822003C8D4E /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		B7E105A817E1E822003C8D4E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController_iPhone.xib; sourceTree = "<group>"; };
 		B7E105AB17E1E822003C8D4E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController_iPad.xib; sourceTree = "<group>"; };
-		B7E105AE17E1E822003C8D4E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController_iPhone.xib; sourceTree = "<group>"; };
 		B7E105B117E1E822003C8D4E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController_iPad.xib; sourceTree = "<group>"; };
 		B7E105B817E2068F003C8D4E /* IndexTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexTableCell.h; sourceTree = "<group>"; };
 		B7E105B917E2068F003C8D4E /* IndexTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexTableCell.m; sourceTree = "<group>"; };
@@ -315,8 +369,8 @@
 				B7E1059917E1E822003C8D4E /* FirstViewController.h */,
 				B7E1059A17E1E822003C8D4E /* FirstViewController.m */,
 				B7E105A717E1E822003C8D4E /* FirstViewController_iPhone.xib */,
-				B7E105AD17E1E822003C8D4E /* SecondViewController_iPhone.xib */,
 				B7E1059C17E1E822003C8D4E /* first.png */,
+				1343BE4317FDAC5E00AB9E43 /* SecondViewController.xib */,
 				B7E1059E17E1E822003C8D4E /* first@2x.png */,
 				B7E105A017E1E822003C8D4E /* SecondViewController.h */,
 				B7E105A117E1E822003C8D4E /* SecondViewController.m */,
@@ -325,9 +379,32 @@
 				B7E105AA17E1E822003C8D4E /* FirstViewController_iPad.xib */,
 				B7E105B017E1E822003C8D4E /* SecondViewController_iPad.xib */,
 				B7E1058817E1E822003C8D4E /* Supporting Files */,
-				B7E105B817E2068F003C8D4E /* IndexTableCell.h */,
+				13EDBAD517FEC9B800640C7D /* BookingViewController.h */,
+				13EDBAD617FEC9B900640C7D /* BookingViewController.m */,
+				13EDBAD717FEC9B900640C7D /* BookingViewController.xib */,
+				1381808118029220004C5429 /* ConfirmViewController.h */,
+				1381808218029220004C5429 /* ConfirmViewController.m */,
+				1381808318029221004C5429 /* ConfirmViewController.xib */,
+				1326AD821800128200D4EE50 /* DrawLine.h */,
+				1326AD831800128200D4EE50 /* DrawLine.m */,
+				1343BE4517FDB32D00AB9E43 /* AppointmentTableViewController.h */,
+				1343BE4617FDB32E00AB9E43 /* AppointmentTableViewController.m */,
+				1343BE4717FDB32E00AB9E43 /* AppointmentTableViewController.xib */,
+				138180661801E9F5004C5429 /* ChooseBookingViewController.h */,
+				138180671801E9F5004C5429 /* ChooseBookingViewController.m */,
+				138180681801E9F5004C5429 /* ChooseBookingViewController.xib */,
+				1381806F1801FEDC004C5429 /* ChooseBookingTableCell.h */,
+				138180701801FEDD004C5429 /* ChooseBookingTableCell.m */,
+				138180721801FF04004C5429 /* ChooseBookingTableCell.xib */,
+				13E2EEC817FDEA1800F01FB8 /* AppointmentViewTableCell.h */,
+				13E2EEC917FDEA1800F01FB8 /* AppointmentViewTableCell.m */,
+				13E2EECB17FDEA3C00F01FB8 /* AppointmentViewTableCell.xib */,
 				B7E105B917E2068F003C8D4E /* IndexTableCell.m */,
+				B7E105B817E2068F003C8D4E /* IndexTableCell.h */,
 				B7E105BB17E206B2003C8D4E /* IndexTableCell.xib */,
+				13E2EECD17FE020D00F01FB8 /* ServiceViewController.h */,
+				13E2EECE17FE020D00F01FB8 /* ServiceViewController.m */,
+				13E2EECF17FE020E00F01FB8 /* ServiceViewController.xib */,
 				B7E105C217E2104E003C8D4E /* DetailViewController.h */,
 				B7E105C317E2104E003C8D4E /* DetailViewController.m */,
 				B7E105C417E2104E003C8D4E /* DetailViewController.xib */,
@@ -341,13 +418,21 @@
 		B7E1058817E1E822003C8D4E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1381806D1801FDA3004C5429 /* disselect.png */,
+				1381806B1801FD99004C5429 /* select.png */,
+				13E826A718009516007C43EC /* next.png */,
+				13E826A9180095D7007C43EC /* last.png */,
+				13A7B7DA17FF373000141F88 /* 3.png */,
+				13EDBAD317FE8A5400640C7D /* jump.png */,
 				B7E1058917E1E822003C8D4E /* ManageSystem-Info.plist */,
 				B7E1058A17E1E822003C8D4E /* InfoPlist.strings */,
 				B7E1058D17E1E822003C8D4E /* main.m */,
 				B7E1058F17E1E822003C8D4E /* ManageSystem-Prefix.pch */,
 				B7E1059317E1E822003C8D4E /* Default.png */,
+				1326AD8017FFE0EA00D4EE50 /* 2.png */,
 				B7E1059517E1E822003C8D4E /* Default@2x.png */,
 				B7E1059717E1E822003C8D4E /* Default-568h@2x.png */,
+				13A7B7DC17FF3B7500141F88 /* 1.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -435,7 +520,6 @@
 				B7E105A617E1E822003C8D4E /* second@2x.png in Resources */,
 				B7E105A917E1E822003C8D4E /* FirstViewController_iPhone.xib in Resources */,
 				B7E105AC17E1E822003C8D4E /* FirstViewController_iPad.xib in Resources */,
-				B7E105AF17E1E822003C8D4E /* SecondViewController_iPhone.xib in Resources */,
 				B7E105B217E1E822003C8D4E /* SecondViewController_iPad.xib in Resources */,
 				B7E105BC17E206B2003C8D4E /* IndexTableCell.xib in Resources */,
 				B7E105C617E2104E003C8D4E /* DetailViewController.xib in Resources */,
@@ -444,6 +528,22 @@
 				B7E8667E17E4B7CF000D9879 /* 37x-UnCheckmark.png in Resources */,
 				B7E8667F17E4B7CF000D9879 /* Icon.png in Resources */,
 				B7E8668017E4B7CF000D9879 /* Icon@2x.png in Resources */,
+				1343BE4417FDAC5E00AB9E43 /* SecondViewController.xib in Resources */,
+				1343BE4917FDB32E00AB9E43 /* AppointmentTableViewController.xib in Resources */,
+				13E2EECC17FDEA3D00F01FB8 /* AppointmentViewTableCell.xib in Resources */,
+				13E2EED117FE020E00F01FB8 /* ServiceViewController.xib in Resources */,
+				13EDBAD417FE8A5400640C7D /* jump.png in Resources */,
+				13EDBAD917FEC9BA00640C7D /* BookingViewController.xib in Resources */,
+				13A7B7DB17FF373000141F88 /* 3.png in Resources */,
+				13A7B7DD17FF3B7500141F88 /* 1.png in Resources */,
+				1326AD8117FFE0EB00D4EE50 /* 2.png in Resources */,
+				13E826A818009516007C43EC /* next.png in Resources */,
+				13E826AA180095D7007C43EC /* last.png in Resources */,
+				1381806A1801E9F5004C5429 /* ChooseBookingViewController.xib in Resources */,
+				1381806C1801FD99004C5429 /* select.png in Resources */,
+				1381806E1801FDA3004C5429 /* disselect.png in Resources */,
+				138180731801FF05004C5429 /* ChooseBookingTableCell.xib in Resources */,
+				1381808518029221004C5429 /* ConfirmViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +564,14 @@
 				B7E105C517E2104E003C8D4E /* DetailViewController.m in Sources */,
 				B7E21B3B17E42FBA0001ED3B /* EGORefreshTableHeaderView.m in Sources */,
 				B7E8668117E4B7CF000D9879 /* MBProgressHUD.m in Sources */,
+				1343BE4817FDB32E00AB9E43 /* AppointmentTableViewController.m in Sources */,
+				13E2EECA17FDEA1900F01FB8 /* AppointmentViewTableCell.m in Sources */,
+				13E2EED017FE020E00F01FB8 /* ServiceViewController.m in Sources */,
+				13EDBAD817FEC9BA00640C7D /* BookingViewController.m in Sources */,
+				1326AD841800128200D4EE50 /* DrawLine.m in Sources */,
+				138180691801E9F5004C5429 /* ChooseBookingViewController.m in Sources */,
+				138180711801FEDD004C5429 /* ChooseBookingTableCell.m in Sources */,
+				1381808418029221004C5429 /* ConfirmViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,14 +600,6 @@
 				B7E105AB17E1E822003C8D4E /* en */,
 			);
 			name = FirstViewController_iPad.xib;
-			sourceTree = "<group>";
-		};
-		B7E105AD17E1E822003C8D4E /* SecondViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B7E105AE17E1E822003C8D4E /* en */,
-			);
-			name = SecondViewController_iPhone.xib;
 			sourceTree = "<group>";
 		};
 		B7E105B017E1E822003C8D4E /* SecondViewController_iPad.xib */ = {

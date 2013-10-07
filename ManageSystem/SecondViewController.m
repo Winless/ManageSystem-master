@@ -13,51 +13,70 @@
 @end
 
 @implementation SecondViewController
+@synthesize usernameTextField;
+@synthesize passwordTextField;
+@synthesize usernameMessage;
+@synthesize passwordMessage;
+
+Boolean jumpFlag;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = @"选择大厅";
+        self.title = @"登陆界面";
         self.tabBarItem.image = [UIImage imageNamed:@"second"];
-        
+        self.tabBarItem.title = @"预约";
     }
     return self;
 }
 
--(void)setData
-{
-    
-}
-
-- (GDataXMLDocument *)parseXml:(NSString *)urlStr
-{
-    NSURL *url = [NSURL URLWithString:urlStr];
-    NSMutableURLRequest* request = [NSMutableURLRequest new];
-    [request setURL:url];
-    [request setHTTPMethod:@"GET"];
-    NSHTTPURLResponse* response;
-    NSData* data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:nil];
-    NSString* responseXMLResult = [[NSString alloc] initWithData:data encoding:CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000)];
-    NSString *newXMLStr = [responseXMLResult stringByReplacingOccurrencesOfString:@"encoding=\"GBK\"" withString:@"encoding=\"UTF-8\""];
-    NSError *error;
-    GDataXMLDocument *doc = [[GDataXMLDocument alloc] initWithXMLString:newXMLStr options:0 error:&error];
-    return doc;
-}
-							
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    address = [NSMutableArray arrayWithCapacity:0];
-    name = [NSMutableArray arrayWithCapacity:0];
-    [self setData];
+    
 }
 
-- (void)didReceiveMemoryWarning
+
+
+- (IBAction)signInButton:(id)sender
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+
+    jumpFlag = YES;
+    if([usernameTextField.text length] == 0)
+    {
+        usernameMessage.hidden = NO;
+        jumpFlag = NO;
+        usernameMessage.text = @"请输入用户名";
+    }
+    else
+    {
+        usernameMessage.hidden = YES;
+    }
+    if([passwordTextField.text length] == 0)
+    {
+        passwordMessage.hidden = NO;
+        jumpFlag = NO;
+        passwordMessage.text = @"请输入密码";
+    }
+    else
+    {
+        passwordMessage.hidden = YES;
+    }
+    if(jumpFlag)
+    {
+        AppointmentTableViewController *appointmentTableViewController = [[AppointmentTableViewController alloc]initWithNibName:@"AppointmentTableViewController" bundle:nil];
+        [self.navigationController pushViewController:appointmentTableViewController animated:YES];
+
+  
+    }
+    
+        
 }
 
+- (IBAction)backgroundTouch:(id)sender
+{
+    [[UIApplication sharedApplication] sendAction:@selector(resignFirstResponder) to:nil from:nil forEvent:nil];
+}
 @end
