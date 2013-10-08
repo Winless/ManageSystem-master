@@ -16,9 +16,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelHallName;
 @property(strong, nonatomic)NSString *hallName;
 @property(strong, nonatomic)NSString *branchId;
-@property(strong, nonatomic)NSString *year;
-@property(strong, nonatomic)NSString *month;
-@property(strong, nonatomic)NSString *day;
 @property(strong, nonatomic)NSString *time;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+
+
 
 @end

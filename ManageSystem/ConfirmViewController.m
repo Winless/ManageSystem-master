@@ -13,6 +13,8 @@
 @end
 
 @implementation ConfirmViewController
+@synthesize time;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,6 +32,8 @@
     [self setData];
 }
 
+
+
 -(void) setData
 {
     GDataXMLDocument *doc = [self parseXml:@"http://61.177.61.252/services/CommonSession/getBranchTree?branchId=0"];
@@ -38,6 +42,7 @@
     GDataXMLElement *thirdElement = [[secondElement elementsForName:@"item"] objectAtIndex:0];
     GDataXMLElement *fourElement = [[thirdElement elementsForName:@"item"] objectAtIndex:0];
     self.labelHallName.text = [[fourElement attributeForName:@"branch_name"] stringValue];
+    self.timeLabel.text = time;
 
     
 }

@@ -33,6 +33,11 @@
     return self;
 }
 
+- (IBAction)backgroundTouch:(id)sender
+{
+    [[UIApplication sharedApplication] sendAction:@selector(resignFirstResponder) to:nil from:nil forEvent:nil];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -59,9 +64,15 @@
 -(void)selectRightAction:(id)sender
 {
     confirmController.branchId = branchId;
-    confirmController.year = year;
-    confirmController.month = month;
-    confirmController.day = day;
+    confirmController.time = @"";
+    confirmController.time = [confirmController.time stringByAppendingString:year];
+    confirmController.time = [confirmController.time stringByAppendingString:@"年"];
+    confirmController.time = [confirmController.time stringByAppendingString:month];
+    confirmController.time = [confirmController.time stringByAppendingString:@"月"];
+    confirmController.time = [confirmController.time stringByAppendingString:day];
+    confirmController.time = [confirmController.time stringByAppendingString:@"号 "];
+    confirmController.time = [confirmController.time stringByAppendingString:time];
+    
     [self.navigationController pushViewController:confirmController animated:YES];
 }
 

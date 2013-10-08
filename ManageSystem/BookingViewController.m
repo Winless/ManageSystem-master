@@ -9,6 +9,9 @@
 #import "BookingViewController.h"
 
 @interface BookingViewController ()
+{
+    ChooseBookingViewController *chooseBookingViewController;
+}
 
 @end
 
@@ -43,6 +46,7 @@ Boolean setFlag;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    chooseBookingViewController = [[ChooseBookingViewController alloc]init];
     DrawLine *lineView = [[DrawLine alloc] initWithFrame:CGRectMake(0, pointZero, 320, 400)];
     lineView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:lineView];
@@ -62,7 +66,6 @@ Boolean setFlag;
 
 -(void)selectRightAction:(id)sender
 {
-    ChooseBookingViewController *chooseBookingViewController = [[ChooseBookingViewController alloc]init];
     chooseBookingViewController.year = [NSString stringWithFormat:@"%d",thisYear];
     chooseBookingViewController.month = [NSString stringWithFormat:@"%d",thisMonth];
     chooseBookingViewController.day = selectDay;
@@ -169,12 +172,8 @@ Boolean setFlag;
     }
     for(UIView *view in self.view.subviews)
     {
-        if ([view isKindOfClass:[UIButton class]] && view.tag == 2)
+        if ([view isKindOfClass:[UIButton class]] && view.tag != 1)
             [view removeFromSuperview];
-        if ([view isKindOfClass:[UILabel class]] && view.tag == 2)
-        {
-            [view removeFromSuperview];
-        }
     }
     for (int i = 0; i < 14; i++)
     {
@@ -193,12 +192,13 @@ Boolean setFlag;
         [timeButton setFont:[UIFont fontWithName:@"Helvetica-Bold" size:12]];
         [timeButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [timeButton addTarget:self action:@selector(selectTimeButton:) forControlEvents:UIControlEventTouchUpInside];
-        [timeButton setTag:2];
+       // [timeButton setTag:2];
         if ([timeButton.titleLabel.text isEqualToString:@"0"])
         {
             [timeButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
             [timeButton setEnabled:NO];
         }
+        [timeButton setTag:i + 2];
         [self.view addSubview:timeButton];
         [self.view bringSubviewToFront:timeButton];
         
@@ -211,11 +211,56 @@ Boolean setFlag;
     NSArray *subviews = [self.view subviews];
     for(UIView *view in subviews)
     {
-        if([view isKindOfClass:[UIButton class]] && view.tag == 2)
+        if([view isKindOfClass:[UIButton class]] && view.tag != 1)
         {
             [view setBackgroundColor:[UIColor clearColor]];
             [self.view bringSubviewToFront:view];
         }
+    }
+    switch (button.tag - 2)
+    {
+        case 0:
+            chooseBookingViewController.time = @"08:30-09:00";
+            break;
+        case 1:
+            chooseBookingViewController.time = @"09:00-09:30";
+            break;
+        case 2:
+            chooseBookingViewController.time = @"09:30-10:00";
+            break;
+        case 3:
+            chooseBookingViewController.time = @"10:00-10:30";
+            break;
+        case 4:
+            chooseBookingViewController.time = @"10:30-11:00";
+            break;
+        case 5:
+            chooseBookingViewController.time = @"11:30-12:00";
+            break;
+        case 6:
+            chooseBookingViewController.time = @"14:00-14:30";
+            break;
+        case 7:
+            chooseBookingViewController.time = @"14:30-15:00";
+            break;
+        case 8:
+            chooseBookingViewController.time = @"15:00-15:30";
+            break;
+        case 9:
+            chooseBookingViewController.time = @"15:30-16:00";
+            break;
+        case 10:
+            chooseBookingViewController.time = @"16:00-16:30";
+            break;
+        case 11:
+            chooseBookingViewController.time = @"16:30-17:00";
+            break;
+        case 12:
+            chooseBookingViewController.time = @"17:00-17:30";
+            break;
+        default:
+            chooseBookingViewController.time = @"17:30-18:00";
+            break;
     }
     [button setBackgroundColor:[UIColor grayColor]];
     [rightButton setEnabled:YES];
