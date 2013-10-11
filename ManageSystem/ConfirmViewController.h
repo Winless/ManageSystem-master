@@ -18,6 +18,7 @@
 @property(strong, nonatomic)NSString *branchId;
 @property(strong, nonatomic)NSString *time;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *bookingLabel;
 
 
 

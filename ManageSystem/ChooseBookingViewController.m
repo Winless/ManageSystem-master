@@ -23,6 +23,7 @@
 @synthesize branchId;
 @synthesize tlgId;
 @synthesize rightButton;
+Boolean flag;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -33,17 +34,12 @@
     return self;
 }
 
-- (IBAction)backgroundTouch:(id)sender
-{
-    [[UIApplication sharedApplication] sendAction:@selector(resignFirstResponder) to:nil from:nil forEvent:nil];
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self setData];
-    confirmController.name = [NSMutableArray arrayWithCapacity:30];
-    confirmController.count = [NSMutableArray arrayWithCapacity:30];
+    confirmController.name = [NSMutableArray arrayWithCapacity:0];
+    confirmController.count = [NSMutableArray arrayWithCapacity:0];
     for (int i = 0; i < 30; i++)
     {
         confirmController.count[i] = @"0";
@@ -72,8 +68,39 @@
     confirmController.time = [confirmController.time stringByAppendingString:day];
     confirmController.time = [confirmController.time stringByAppendingString:@"号 "];
     confirmController.time = [confirmController.time stringByAppendingString:time];
-    
+    UITextField *textFieldView;
+    UILabel *LabelView;
+    ChooseBookingTableCell *tabelCellView;
+    for(tabelCellView in self.view.subviews)
+    {
+        if ([tabelCellView isKindOfClass:[ChooseBookingTableCell class]])
+        {
+            for (textFieldView in tabelCellView.subviews)
+            {
+                if ([textFieldView isKindOfClass:[UITextField class]])
+                {
+                    if (textFieldView.text.length != 0)
+                    {
+                        flag = true;
+                        [confirmController.count addObject:textFieldView.text];
+                    }
+                }
+            }
+            for (LabelView in tabelCellView.subviews)
+            {
+                if ([LabelView isKindOfClass:[UILabel class]])
+                {
+                    if (flag)
+                    {
+                        [confirmController.name addObject:LabelView.text];
+                    }
+                }
+            }
+        }
+    }
     [self.navigationController pushViewController:confirmController animated:YES];
+
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -146,6 +173,7 @@
         cell = [[ChooseBookingTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     [cell.textField addTarget:self action:@selector(onEditing:) forControlEvents:UIControlEventEditingDidBegin];
+    cell.textField.keyboardType = UIKeyboardTypeNumberPad;
     if (indexPath.row == 0)
     {
         cell.label1.text = @"业务名称";
@@ -172,18 +200,22 @@
                 }
                 cell.textField.hidden = YES;
             }
-            
         }
     }
     
     return cell;
 }
 
+
+
+
+
 -(void)onEditing:(UITextField*)textField
 {
     
 
     [rightButton setEnabled:YES];
+   // [textField resignFirstResponder];
 }
 
 /*
@@ -239,15 +271,12 @@
             tag[indexPath.row] = 0;
             cell.textField.hidden = YES;
             cell.textField.text = @"";
-            confirmController.count[indexPath.row - 1] = @"0";
         }
         else
         {
             cell.image.image = [UIImage imageNamed:@"select.png"];
             cell.textField.hidden = NO;
             tag[indexPath.row] = 1;
-            confirmController.name[indexPath.row - 1] = cell.label1;
-            confirmController.count[indexPath.row - 1] = cell.label2;
         
         }
         

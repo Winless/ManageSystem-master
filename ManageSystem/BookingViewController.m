@@ -172,7 +172,7 @@ Boolean setFlag;
     }
     for(UIView *view in self.view.subviews)
     {
-        if ([view isKindOfClass:[UIButton class]] && view.tag != 1)
+        if ([view isKindOfClass:[UIButton class]] && view.tag > 1)
             [view removeFromSuperview];
     }
     for (int i = 0; i < 14; i++)
@@ -211,7 +211,7 @@ Boolean setFlag;
     NSArray *subviews = [self.view subviews];
     for(UIView *view in subviews)
     {
-        if([view isKindOfClass:[UIButton class]] && view.tag != 1)
+        if([view isKindOfClass:[UIButton class]] && view.tag > 1)
         {
             [view setBackgroundColor:[UIColor clearColor]];
             [self.view bringSubviewToFront:view];
@@ -407,7 +407,7 @@ Boolean setFlag;
         self.serverTime = [serverTimeElement stringValue];
         self.serverTime = [serverTime substringWithRange:NSMakeRange(0, 10)];
         self.endTime = [self judgeStopTime:serverTime];
-        self.beginTime = [self JudgeBeginTime:serverTime];
+        self.beginTime = [self judgeBeginTime:serverTime];
         thisYear = [[serverTime substringWithRange:NSMakeRange(0, 4)]intValue];
         thisMonth = [[serverTime substringWithRange:NSMakeRange(5, 2)]intValue];
         setFlag = true;
@@ -472,7 +472,7 @@ Boolean setFlag;
     return date;
 }
 
--(NSString *)JudgeBeginTime:(NSString *)date
+-(NSString *)judgeBeginTime:(NSString *)date
 {
     date = [date substringWithRange:NSMakeRange(0, 8)];
     date = [date stringByAppendingString:@"01"];

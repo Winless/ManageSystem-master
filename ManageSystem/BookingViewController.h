@@ -27,14 +27,14 @@
 @property (strong, nonatomic)NSString *endTime;
 @property (strong, nonatomic)NSString *beginTime;
 @property (strong, nonatomic)NSString *monthBeginDay;
-@property (strong, nonatomic)NSString *selectDay;
-@property (strong, nonatomic)NSString *headerString;
-@property (strong, nonatomic)IBOutlet UILabel *dataLabel;
 @property (strong, nonatomic)IBOutlet UIButton *dateButton;
+@property (strong, nonatomic)IBOutlet UILabel *dataLabel;
+@property (weak, nonatomic) IBOutlet UILabel *headerLabel;
+@property (strong, nonatomic)NSString *headerString;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
 @property (weak, nonatomic) IBOutlet UIButton *lastButton;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
-@property (weak, nonatomic) IBOutlet UILabel *headerLabel;
+@property (strong, nonatomic)NSString *selectDay;
 @property (strong, nonatomic) IBOutlet UIButton *timeButton;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *rightButton;
  
@@ -48,7 +48,7 @@
 -(void)nextMonth;
 -(void)lastMonth;
 -(NSString *)judgeStopTime:(NSString*)date;
--(NSString *)JudgeBeginTime:(NSString*)date;
+-(NSString *)judgeBeginTime:(NSString*)date;
 -(int)judgeDay:(int)month :(int)year;
 
 

@@ -25,7 +25,6 @@
 @property (strong, nonatomic)NSString *branchId;
 @property (strong, nonatomic)IBOutlet UIBarButtonItem *rightButton;
 
-- (IBAction)backgroundTouch:(id)sender;
 -(void)setData;
 
 @end

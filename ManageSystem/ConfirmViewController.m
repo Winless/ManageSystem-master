@@ -43,6 +43,15 @@
     GDataXMLElement *fourElement = [[thirdElement elementsForName:@"item"] objectAtIndex:0];
     self.labelHallName.text = [[fourElement attributeForName:@"branch_name"] stringValue];
     self.timeLabel.text = time;
+    NSString *labelString = @"";
+    for (int i = 0;; i++)
+    {
+        if ([self.name objectAtIndex:i] == nil)
+            break;
+        labelString = [labelString stringByAppendingString:[self.name objectAtIndex:i]];
+        labelString = [labelString stringByAppendingString:@"  "];
+    }
+    self.bookingLabel.text = labelString;
 
     
 }

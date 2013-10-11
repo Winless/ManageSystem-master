@@ -18,7 +18,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    UIViewController *viewController1, *viewController2, *viewController3, *viewController4, *viewController5, *viewController6;
+    UIViewController *viewController1, *viewController2, *viewController3, *viewController4, *viewController5;
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController_iPhone" bundle:nil];
         viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
