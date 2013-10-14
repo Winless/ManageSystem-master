@@ -11,6 +11,7 @@
 #import "GDataXMLNode.h"
 #import "CorePlot-CocoaTouch.h"
 #import "MBProgressHUD.h"
+#import "TKAlertCenter.h"	
 
 @interface DetailViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate, MBProgressHUDDelegate, CPTPlotDataSource>
 {
@@ -30,6 +31,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *centerImg;
 @property (weak, nonatomic) IBOutlet UIView *Graph1;
 @property (weak, nonatomic) IBOutlet UIView *Graph2;
+@property (strong, nonatomic) NSMutableArray *brachIdArr;
+@property (nonatomic) NSUInteger brachIdArrId;
 @property (strong, nonatomic) NSString *branchId;
 @property (strong, nonatomic) NSString *waitCount;
 @property (strong, nonatomic) NSString *maxWaitTime;
@@ -40,6 +43,8 @@
 @property (strong, nonatomic) NSString *imageUrl;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UILabel *serverTime;
+@property (strong, nonatomic) IBOutlet UITableView *detailTableView;
+
 - (IBAction)toggleControl:(id)sender;
 -(CPTGraphHostingView *)drawBar;
 -(CPTGraphHostingView *)drawScort;

@@ -41,6 +41,12 @@
     waitCount = [NSMutableArray arrayWithCapacity:0];
     maxWaitTime = [NSMutableArray arrayWithCapacity:0];
     
+//    HUD = [[MBProgressHUD alloc] initWithView:self.view];
+//    [self.view addSubview:HUD];
+//    HUD.delegate = self;
+//    HUD.labelText = @"加载中...";
+//    HUD.minSize = CGSizeMake(135.f, 135.f);
+//    [HUD showWhileExecuting:@selector(setTableViewData) onTarget:self withObject:nil animated:YES];
     [self setTableViewData];
 }
 
@@ -75,7 +81,16 @@
     {
         [branchAddr addObject:[[item attributeForName:@"branch_addr"] stringValue]];
     }
+    
+//    [self performSelectorOnMainThread:@selector(reloadTableViewData) withObject:nil waitUntilDone:YES];
 }
+
+//-(void)reloadTableViewData
+//{
+//    HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
+//	HUD.mode = MBProgressHUDModeCustomView;
+//	HUD.labelText = @"加载成功!";
+//}
 
 - (GDataXMLDocument *)parseNetworkXml:(NSString *)urlStr
 {
@@ -141,6 +156,7 @@
         cell.waitingPeople.text = [NSString stringWithFormat:@"%@",[waitCount objectAtIndex:0]];
         cell.address.text = [NSString stringWithFormat:@"%@",[branchAddr objectAtIndex:0]];
         cell.minutes.text = [NSString stringWithFormat:@"%@",[maxWaitTime objectAtIndex:0]];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     else
     {
@@ -167,10 +183,12 @@
     }
     if (indexPath.section == 0)
     {
-        detailViewController.branchId = @"0";
+        return;
     }
     else
     {
+        detailViewController.brachIdArr = branchId;
+        detailViewController.brachIdArrId = indexPath.row+1;
         detailViewController.branchId = [NSString stringWithFormat:@"%@", [branchId objectAtIndex:indexPath.row+1]];
     }
     [self.navigationController pushViewController:detailViewController animated:YES];

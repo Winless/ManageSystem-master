@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13165885180BB5BD00C542ED /* TKAlertCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 13165880180BB5BD00C542ED /* TKAlertCenter.m */; };
+		13165886180BB5BD00C542ED /* TKGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = 13165882180BB5BD00C542ED /* TKGlobal.m */; };
+		13165887180BB5BD00C542ED /* UIView+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 13165884180BB5BD00C542ED /* UIView+TKCategory.m */; };
 		1326AD8117FFE0EB00D4EE50 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1326AD8017FFE0EA00D4EE50 /* 2.png */; };
 		1326AD841800128200D4EE50 /* DrawLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 1326AD831800128200D4EE50 /* DrawLine.m */; };
 		1343BE4417FDAC5E00AB9E43 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1343BE4317FDAC5E00AB9E43 /* SecondViewController.xib */; };
@@ -69,6 +72,12 @@
 
 /* Begin PBXFileReference section */
 		1310FD8917FC9AE600B4AD77 /* DetailViewTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewTableCell.h; path = ../DetailViewTableCell.h; sourceTree = "<group>"; };
+		1316587F180BB5BD00C542ED /* TKAlertCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKAlertCenter.h; sourceTree = "<group>"; };
+		13165880180BB5BD00C542ED /* TKAlertCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKAlertCenter.m; sourceTree = "<group>"; };
+		13165881180BB5BD00C542ED /* TKGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKGlobal.h; sourceTree = "<group>"; };
+		13165882180BB5BD00C542ED /* TKGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKGlobal.m; sourceTree = "<group>"; };
+		13165883180BB5BD00C542ED /* UIView+TKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TKCategory.h"; sourceTree = "<group>"; };
+		13165884180BB5BD00C542ED /* UIView+TKCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TKCategory.m"; sourceTree = "<group>"; };
 		1326AD8017FFE0EA00D4EE50 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		1326AD821800128200D4EE50 /* DrawLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawLine.h; sourceTree = "<group>"; };
 		1326AD831800128200D4EE50 /* DrawLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawLine.m; sourceTree = "<group>"; };
@@ -242,6 +251,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1316587E180BB5A400C542ED /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				1316587F180BB5BD00C542ED /* TKAlertCenter.h */,
+				13165880180BB5BD00C542ED /* TKAlertCenter.m */,
+				13165881180BB5BD00C542ED /* TKGlobal.h */,
+				13165882180BB5BD00C542ED /* TKGlobal.m */,
+				13165883180BB5BD00C542ED /* UIView+TKCategory.h */,
+				13165884180BB5BD00C542ED /* UIView+TKCategory.m */,
+			);
+			name = Toast;
+			sourceTree = "<group>";
+		};
 		B7DD420D17F7F985006D0C6E /* CorePlotHeaders */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,6 +381,7 @@
 		B7E1058717E1E822003C8D4E /* ManageSystem */ = {
 			isa = PBXGroup;
 			children = (
+				1316587E180BB5A400C542ED /* Toast */,
 				B7DD420D17F7F985006D0C6E /* CorePlotHeaders */,
 				B7E21B3817E42FBA0001ED3B /* View */,
 				B7E8668217E4B845000D9879 /* MBProgressHUD */,
@@ -372,7 +395,6 @@
 				B7E1059C17E1E822003C8D4E /* first.png */,
 				1343BE4317FDAC5E00AB9E43 /* SecondViewController.xib */,
 				B7E1059E17E1E822003C8D4E /* first@2x.png */,
-				B7E105A017E1E822003C8D4E /* SecondViewController.h */,
 				B7E105A117E1E822003C8D4E /* SecondViewController.m */,
 				B7E105A317E1E822003C8D4E /* second.png */,
 				B7E105A517E1E822003C8D4E /* second@2x.png */,
@@ -385,6 +407,7 @@
 				1381808118029220004C5429 /* ConfirmViewController.h */,
 				1381808218029220004C5429 /* ConfirmViewController.m */,
 				1381808318029221004C5429 /* ConfirmViewController.xib */,
+				B7E105A017E1E822003C8D4E /* SecondViewController.h */,
 				1326AD821800128200D4EE50 /* DrawLine.h */,
 				1326AD831800128200D4EE50 /* DrawLine.m */,
 				1343BE4517FDB32D00AB9E43 /* AppointmentTableViewController.h */,
@@ -572,6 +595,9 @@
 				138180691801E9F5004C5429 /* ChooseBookingViewController.m in Sources */,
 				138180711801FEDD004C5429 /* ChooseBookingTableCell.m in Sources */,
 				1381808418029221004C5429 /* ConfirmViewController.m in Sources */,
+				13165885180BB5BD00C542ED /* TKAlertCenter.m in Sources */,
+				13165886180BB5BD00C542ED /* TKGlobal.m in Sources */,
+				13165887180BB5BD00C542ED /* UIView+TKCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

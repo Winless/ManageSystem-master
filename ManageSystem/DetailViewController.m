@@ -36,10 +36,56 @@
     HUD.labelText = @"加载中...";
     HUD.minSize = CGSizeMake(135.f, 135.f);
     [HUD showWhileExecuting:@selector(getData) onTarget:self withObject:nil animated:YES];
+    
+    UISwipeGestureRecognizer *swipeGesLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeLeft)];
+    swipeGesLeft.direction = UISwipeGestureRecognizerDirectionLeft;
+    [self.detailTableView addGestureRecognizer:swipeGesLeft];
+    
+    UISwipeGestureRecognizer *swipeGesRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeRight)];
+    swipeGesRight.direction = UISwipeGestureRecognizerDirectionRight;
+    [self.detailTableView addGestureRecognizer:swipeGesRight];
+}
+
+-(void)swipeLeft
+{
+    if (self.brachIdArrId == [self.brachIdArr count]-1)
+    {
+        [self showToastView:@"已经是最后一个服务厅"];
+        return;
+    }
+    self.brachIdArrId++;
+    self.branchId = [self.brachIdArr objectAtIndex:self.brachIdArrId];
+    HUD.customView.hidden = YES;
+    HUD.mode = MBProgressHUDModeIndeterminate;
+    HUD.labelText = @"加载中...";
+    HUD.minSize = CGSizeMake(135.f, 135.f);
+    [HUD showWhileExecuting:@selector(getData) onTarget:self withObject:nil animated:YES];
+}
+
+-(void)swipeRight
+{
+    if (self.brachIdArrId == 1)
+    {
+        [self showToastView:@"已经是第一个服务厅"];
+        return;
+    }
+    self.brachIdArrId--;
+    self.branchId = [self.brachIdArr objectAtIndex:self.brachIdArrId];
+    HUD.customView.hidden = YES;
+    HUD.mode = MBProgressHUDModeIndeterminate;
+    HUD.labelText = @"加载中...";
+    HUD.minSize = CGSizeMake(135.f, 135.f);
+    [HUD showWhileExecuting:@selector(getData) onTarget:self withObject:nil animated:YES];
+}
+
+- (void)showToastView:(NSString*)error
+{
+    [[TKAlertCenter defaultCenter] postAlertWithMessage:error];
 }
 
 -(void)getData
 {
+    HUD.customView.hidden = YES;
     NSString *urlStr = @"http://61.177.61.252/services/MobileSession/getBranchRealtimeInfo?branchId=";
     urlStr = [urlStr stringByAppendingString:self.branchId];
     GDataXMLDocument *doc = [self parseNetworkXml:urlStr];
@@ -497,11 +543,10 @@
         default:
             break;
     }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return cell;
 }
-
-
 
 #pragma UIScrollView
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView

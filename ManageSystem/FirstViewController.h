@@ -11,9 +11,11 @@
 #import "DetailViewController.h"
 #import "GDataXMLNode.h"
 #import "EGORefreshTableHeaderView.h"
+#import "MBProgressHUD.h"
 
-@interface FirstViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, EGORefreshTableHeaderDelegate>
+@interface FirstViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, EGORefreshTableHeaderDelegate, MBProgressHUDDelegate>
 {
+//    MBProgressHUD *HUD;
     NSMutableArray *branchName;
     NSMutableArray *branchId;
     NSMutableArray *waitCount;
